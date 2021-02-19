@@ -48,6 +48,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/images/old_paper.jpg
     - assets/aboutme_background.jpeg
     - assets/karmath_splash.png
     - assets/agyat.png
@@ -55,11 +56,12 @@ flutter:
     - assets/bhagwan.png
     - assets/bhagwan.svg
     - assets/bird_fly.png
-    - assets/dard-1.svg
+    - assets/dard.png
     - assets/dosti.png
     - assets/facebook.png
     - assets/github.png
     - assets/guru.png
+    - assets/lagan.png
     - assets/ic_launcher-playstore.png
     - assets/instagram.png
     - assets/linkedin.png
@@ -73,6 +75,7 @@ flutter:
     - assets/oneLiner-1.png
     - assets/prema.png
     - assets/prerna.png
+    - assets/tyag.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

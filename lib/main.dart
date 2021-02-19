@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:karmathrevised/content_page.dart';
 import 'package:karmathrevised/splash.dart';
+
+import 'widgets/nav_drawer.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,28 +31,58 @@ Widget _createMenuIcon(BuildContext context) => IconButton(
 
 Widget _createCategoryRow(
     BuildContext context, String text, String subText, String image) {
-  return Container(
-    // color: Colors.white,
-    decoration: BoxDecoration(
-      border: Border.all(width: 3.0),
-      borderRadius: BorderRadius.all(Radius.circular(6.0)),
-    ),
-    child: Row(
-      children: <Widget>[
-        Image.asset(
-          "assets/" + image,
-          width: 30,
-          height: 30,
-        ),
-        Column(
-          children: <Widget>[
-            Text(text, style: TextStyle(color: Colors.black, fontSize: 18)),
-            Text(subText, style: TextStyle(color: Colors.black, fontSize: 16))
-          ],
-        )
-      ],
-    ),
-  );
+  return Padding(
+      padding: EdgeInsets.only(left: 5, right: 5),
+      child: GestureDetector(
+          onTap: () {
+            print('tapped');
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => ContentPage(
+                        label: text,
+                      )),
+            );
+          },
+          child: Container(
+            padding: EdgeInsets.only(left: 5),
+            width: MediaQuery.of(context).size.width - 10,
+            height: 60,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              border: Border.all(width: 1.0),
+              borderRadius: BorderRadius.all(Radius.circular(6.0)),
+            ),
+            child: Row(
+              // mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Image.asset(
+                  "assets/" + image,
+                  width: 30,
+                  height: 30,
+                ),
+                Container(width: 5),
+                Stack(
+                  // mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.only(left: 0, top: 0),
+                      child: Text(text,
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700)),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 0, top: 20),
+                      child: Text(subText,
+                          style: TextStyle(color: Colors.black, fontSize: 14)),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          )));
 }
 
 class HomePage extends StatefulWidget {
@@ -69,28 +102,63 @@ class _HomePageState extends State<HomePage> {
         kToolbarHeight;
 
     return Scaffold(
+        drawer: NavDrawer(),
+        backgroundColor: Colors.grey,
         appBar: AppBar(
           // brightness: Platform.isIOS ? Brightness.light : Brightness.dark,
-          backgroundColor: Color(0xFFff8700),
+          backgroundColor: Color(0xFFff8700), // Color(0xFF02dac5)
           automaticallyImplyLeading: false,
-          leading: _createMenuIcon(context),
+          // leading: _createMenuIcon(context),
           elevation: 1.0,
-          title: Text("कर्मठ",
-              style: TextStyle(color: Colors.black, fontSize: 18)),
+          title: Text("  कर्मठ",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700)),
         ),
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
+              Container(
+                height: 2,
+              ),
               _createCategoryRow(context, "अज्ञात", "विशेष अवसर", "agyat.png"),
-              _createCategoryRow(context, "भगवान", "विशेष अवसर", "agyat.png"),
-              _createCategoryRow(context, "दर्द", "विशेष अवसर", "agyat.png"),
-              _createCategoryRow(context, "दोस्ती", "विशेष अवसर", "agyat.png"),
-              _createCategoryRow(context, "गुरु", "विशेष अवसर", "agyat.png"),
-              _createCategoryRow(context, "लगन", "विशेष अवसर", "agyat.png"),
+              Container(
+                height: 3,
+              ),
+              _createCategoryRow(context, "भगवान", "विशेष अवसर", "bhagwan.png"),
+              Container(
+                height: 3,
+              ),
+              _createCategoryRow(context, "दर्द", "विशेष अवसर", "dard.png"),
+              Container(
+                height: 3,
+              ),
+              _createCategoryRow(context, "दोस्ती", "विशेष अवसर", "dosti.png"),
+              Container(
+                height: 3,
+              ),
+              _createCategoryRow(context, "गुरु", "विशेष अवसर", "guru.png"),
+              Container(
+                height: 3,
+              ),
+              _createCategoryRow(context, "लगन", "विशेष अवसर", "lagan.png"),
+              Container(
+                height: 3,
+              ),
               _createCategoryRow(
                   context, "प्रेरणा", "विशेष अवसर", "prerna.png"),
+              Container(
+                height: 3,
+              ),
               _createCategoryRow(context, "प्रेम", "विशेष अवसर", "prema.png"),
-              _createCategoryRow(context, "त्याग", "विशेष अवसर", "agyat.png")
+              Container(
+                height: 3,
+              ),
+              _createCategoryRow(context, "त्याग", "विशेष अवसर", "tyag.png"),
+              Container(
+                height: 3,
+              ),
             ],
           ),
         ));
