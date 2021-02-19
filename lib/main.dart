@@ -126,36 +126,36 @@ class _HomePageState extends State<HomePage> {
               Container(
                 height: 3,
               ),
-              _createCategoryRow(context, "भगवान", "विशेष अवसर", "bhagwan.png"),
+              _createCategoryRow(context, "भगवान", "परमेश्वर एक कल्पना", "bhagwan.png"),
               Container(
                 height: 3,
               ),
-              _createCategoryRow(context, "दर्द", "विशेष अवसर", "dard.png"),
+              _createCategoryRow(context, "दर्द", "जीवन में बहुत दर्द है", "dard.png"),
               Container(
                 height: 3,
               ),
-              _createCategoryRow(context, "दोस्ती", "विशेष अवसर", "dosti.png"),
+              _createCategoryRow(context, "दोस्ती", "दोस्त जीवन सरल कर देते है", "dosti.png"),
               Container(
                 height: 3,
               ),
-              _createCategoryRow(context, "गुरु", "विशेष अवसर", "guru.png"),
+              _createCategoryRow(context, "गुरु", "जीवन के मार्गदर्शक", "guru.png"),
               Container(
                 height: 3,
               ),
-              _createCategoryRow(context, "लगन", "विशेष अवसर", "lagan.png"),
+              _createCategoryRow(context, "लगन", "विद्यार्थी की तत्परता", "lagan.png"),
+              Container(
+                height: 3,
+              ),
+              _createCategoryRow(context, "प्रेम", "इस संसार में प्रेम से बढ़ कर कुछ नहीं", "prema.png"),
               Container(
                 height: 3,
               ),
               _createCategoryRow(
-                  context, "प्रेरणा", "विशेष अवसर", "prerna.png"),
+                  context, "प्रेरणा", "निराशा से मुक्त रहिए", "prerna.png"),
               Container(
                 height: 3,
               ),
-              _createCategoryRow(context, "प्रेम", "विशेष अवसर", "prema.png"),
-              Container(
-                height: 3,
-              ),
-              _createCategoryRow(context, "त्याग", "विशेष अवसर", "tyag.png"),
+              _createCategoryRow(context, "त्याग", "कुछ पाने के लिए कुछ खोना पड़ता है", "tyag.png"),
               Container(
                 height: 3,
               ),
